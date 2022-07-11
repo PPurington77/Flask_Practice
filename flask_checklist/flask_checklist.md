@@ -17,8 +17,9 @@ pipenv shell
 ```
 - create a server.py file
 ```py
-from flask import Flask, render_template, request, redirect   
-app = Flask(__name__)    
+from flask import Flask, render_template, request, redirect, session  
+app = Flask(__name__) 
+app.secret_key = 'whatever you want' #in powershell [guid]::NewGuid() will create a custom key
 @app.route('/')         
 
 #THIS WILL MOVE IN THE FUTURE
